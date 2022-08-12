@@ -60,8 +60,18 @@ class Ui_Dialog(object):
                 if keys.split('+') == ['']:
                     pdfADDSplitter(self.filePath[0], keys.split('+'))
                 self.label.setText('PDF Split Completed')
+                # popup message 
+
             else:
                 self.label.setText('Please enter keys to split')
+
+        msg = QtWidgets.QMessageBox()
+        msg.setIcon(QtWidgets.QMessageBox.Information)
+        msg.setText("PDF Split Completed")
+        msg.setWindowTitle("PDF Splitter")
+        msg.setStandardButtons(QtWidgets.QMessageBox.Ok)
+        msg.exec_()
+        
         self.label_2.setText("Select PDF File ")
         self.lineEdit.setText("")
         pass

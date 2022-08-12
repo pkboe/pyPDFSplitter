@@ -11,7 +11,6 @@ def pdfCSVSplitter(filePath, keys):
 
         pageObj = pdfReader.getPage(pageNum)
         pageText = pageObj.extractText()
-        print(pageText)
         # if each key in keys array is found in the pageText then append the page into new pdf file
         for key in keys:
             if key in pageText:
@@ -49,7 +48,6 @@ def pdfADDSplitter(filePath, keys):
         print(pdfReader.numPages)
         pageObj = pdfReader.getPage(pageNum)
         pageText = pageObj.extractText()
-        print(pageText)
 
         # if all keys are found in the pageText then append the page into new pdf file
         # convert keys to string text
